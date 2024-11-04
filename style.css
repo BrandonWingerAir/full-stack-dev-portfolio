@@ -51,8 +51,19 @@ h1 {
     font-size: 32px;
 }
 
+h1 span {
+    color: #fff;
+    font-size: 31px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.menu-button {
+    display: none;
+}
+
 nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
 }
 
@@ -64,6 +75,7 @@ nav a {
 nav img {
     width: 26px;
 }
+
 
 /* Hero Section */
 .hero-section {
@@ -124,6 +136,7 @@ h3 {
     text-align: center;
     position: relative;
     padding: 0 calc(var(--pagePadding) * 2) 24px;
+    border-bottom: 1px solid #616161;
 }
 
 #projects h4 {
@@ -199,4 +212,128 @@ h6 {
     font-size: 16px;
     font-weight: 600;
     margin: 0;
+}
+
+@media screen and (max-width: 750px){
+    header {
+        padding: 0 6vw;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* Menu Button */
+    .path1, .path2 {
+        stroke-dasharray: 104;
+        stroke-dashoffset: -71;
+        transition: 1s all ease;
+    }
+
+    .cross {
+       stroke-dashoffset: 68;
+    }
+
+    .mline {
+       stroke-dasharray: 41;
+       stroke-dashoffset: -82;
+       transition: 1s all ease;
+    }
+
+    .hide {
+       stroke-dasharray: 43;
+       stroke-dashoffset: 130;
+    }
+
+    .svgburg {
+       width: 37px;
+    }
+
+    .menu-button {
+        position: relative;
+        display: block;
+        color: white;
+        background: #fff;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+    }
+    
+    .menu-button:focus + .menu {
+        display: block;
+    }
+     
+    /* Mobile Menu */
+    .mobile-menu {
+        display: none;
+        background-color: #333;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+    
+    .mobile-menu a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .mobile-menu a:hover {
+        background-color: #575757;
+    }
+
+    /* Hero Section */
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    /* Logo Banner */
+    .logos-banner {
+        height: 40px;
+        margin: 0 5.6vw 35px;
+        padding: 15px 10px;
+    }
+
+    .php {
+        width: 61px;
+    }
+    
+    .linux {
+        width: 31px;
+    }
+    
+    .sql {
+        width: 32px;
+    }
+    
+    .vue {
+        width: 33px;
+        height: auto;
+    }
+
+    #projects {
+        padding: 0 5.5vw 34px;
+        background-color: var(--primaryColor);
+    }
+
+    #projects h4 {
+        margin: 26px 0 38px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-row-gap: 21px;
+    }
+
+    #about {
+        width: 75vw;
+        padding: 52px 1vw;
+    }
 }
