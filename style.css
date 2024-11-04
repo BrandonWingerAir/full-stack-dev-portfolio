@@ -238,6 +238,10 @@ h6 {
        width: 37px;
     }
 
+    .ios-menu-icon {
+        display: none;
+    }
+
     .path1, .path2 {
         stroke-dasharray: 104;
         stroke-dashoffset: -71;
@@ -258,6 +262,27 @@ h6 {
        stroke-dasharray: 43;
        stroke-dashoffset: 130;
     }
+
+    /* Safari 7.1+ */
+    _::-webkit-full-page-media .menu-icon, 
+    _:future  .menu-icon, 
+    :root .safari_only .menu-icon {
+        display: none;
+    }
+
+    _::-webkit-full-page-media .ios-menu-icon, 
+    _:future  .ios-menu-icon, 
+    :root .safari_only .ios-menu-icon {
+        display: block;
+        width: 42px;
+        height: 42px;
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        filter: FlipV;
+        -ms-filter: "FlipV";
+    }
     
     /* Mobile Menu */
     .menu {
@@ -269,7 +294,7 @@ h6 {
         display: none;
         background-color: #fff;
         position: absolute;
-        top: 100px;
+        top: 122px;
         right: 6vw;
         text-align: right;
     }
