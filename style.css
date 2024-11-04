@@ -263,25 +263,23 @@ h6 {
        stroke-dashoffset: 130;
     }
 
-    /* Safari 7.1+ */
-    _::-webkit-full-page-media .menu-icon, 
-    _:future  .menu-icon, 
-    :root .safari_only .menu-icon {
-        display: none;
-    }
-
-    _::-webkit-full-page-media .ios-menu-icon, 
-    _:future  .ios-menu-icon, 
-    :root .safari_only .ios-menu-icon {
-        display: block;
-        width: 42px;
-        height: 42px;
-        -moz-transform: scaleY(-1);
-        -o-transform: scaleY(-1);
-        -webkit-transform: scaleY(-1);
-        transform: scaleY(-1);
-        filter: FlipV;
-        -ms-filter: "FlipV";
+    /* Mobile iOS Devices*/
+    @supports (-webkit-touch-callout: none) {
+        .menu-icon {
+            display: none;
+        }
+    
+        .ios-menu-icon {
+            display: block;
+            width: 42px;
+            height: 42px;
+            -moz-transform: scaleY(-1);
+            -o-transform: scaleY(-1);
+            -webkit-transform: scaleY(-1);
+            transform: scaleY(-1);
+            filter: FlipV;
+            -ms-filter: "FlipV";
+        }
     }
     
     /* Mobile Menu */
