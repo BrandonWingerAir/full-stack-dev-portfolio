@@ -57,7 +57,7 @@ h1 span {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.menu-button {
+.mobile-button, .mobile-menu {
     display: none;
 }
 
@@ -185,6 +185,10 @@ h3 {
     margin: 4px 0;
 }
 
+#about ul {
+    padding-left: 30px;
+}
+
 /* Footer Section */
 footer {
     text-align: center;
@@ -219,37 +223,8 @@ h6 {
         padding: 0 6vw;
     }
 
-    .menu {
-        display: none;
-    }
-
-    /* Menu Button */
-    .path1, .path2 {
-        stroke-dasharray: 104;
-        stroke-dashoffset: -71;
-        transition: 1s all ease;
-    }
-
-    .cross {
-       stroke-dashoffset: 68;
-    }
-
-    .mline {
-       stroke-dasharray: 41;
-       stroke-dashoffset: -82;
-       transition: 1s all ease;
-    }
-
-    .hide {
-       stroke-dasharray: 43;
-       stroke-dashoffset: 130;
-    }
-
-    .svgburg {
-       width: 37px;
-    }
-
-    .menu-button {
+    /* Mobile Menu Button */
+    .mobile-button {
         position: relative;
         display: block;
         color: white;
@@ -258,23 +233,48 @@ h6 {
         cursor: pointer;
         border: none;
     }
-    
-    .menu-button:focus + .menu {
-        display: block;
+
+    .menu-icon {
+       width: 37px;
     }
-     
+
+    .path1, .path2 {
+        stroke-dasharray: 104;
+        stroke-dashoffset: -71;
+        transition: 1s all ease;
+    }
+
+    .cross {
+        stroke-dashoffset: 68;
+    }
+
+    .mline {
+       stroke-dasharray: 41;
+       stroke-dashoffset: -82;
+       transition: 1s all ease;
+    }
+    
+    .hide {
+       stroke-dasharray: 43;
+       stroke-dashoffset: 130;
+    }
+    
     /* Mobile Menu */
-    .mobile-menu {
+    .menu {
         display: none;
-        background-color: #333;
-        padding: 10px;
+    }
+
+    .mobile-menu {
+        width: 100vw;
+        display: none;
+        background-color: #fff;
         position: absolute;
-        top: 50px;
-        width: 100%;
+        top: 100px;
+        right: 6vw;
+        text-align: right;
     }
     
     .mobile-menu a {
-        color: white;
         padding: 10px;
         text-decoration: none;
         display: block;
@@ -282,6 +282,10 @@ h6 {
     
     .mobile-menu a:hover {
         background-color: #575757;
+    }
+
+    .open-menu {
+        display: block;
     }
 
     /* Hero Section */
@@ -317,6 +321,7 @@ h6 {
         height: auto;
     }
 
+    /* Project Section */
     #projects {
         padding: 0 5.5vw 34px;
         background-color: var(--primaryColor);
@@ -332,8 +337,14 @@ h6 {
         grid-row-gap: 21px;
     }
 
+    /* About Section */
     #about {
         width: 75vw;
         padding: 52px 1vw;
+    }
+
+    /* Footer */
+    footer h6 {
+        font-size: 14px;
     }
 }

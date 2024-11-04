@@ -21,21 +21,23 @@
                 </li>
             </ul>
 
-            <button class="menu-button">
-                <svg class="svgburg" width="95" height="93" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mobile Menu -->
+            <button class="mobile-button">
+                <svg class="menu-icon" width="95" height="93" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="path1" d="M1.5 7L27.5 33C27.5 33 30.5 36 36.5 40.5C42.5 45 48 33.5 41.5 33C35 32.5 2 33 2 33" stroke="black" stroke-width="2"/>
                     <path class="path2" d="M2 33L28 7C28 7 33.5 1 37 1C40.5 1 43 6.20692 40 7C37 7.79308 1 7 1 7" stroke="black" stroke-width="2"/>
                     <path class="mline" d="M1.5 20H28.5" stroke="black" stroke-width="2"/>
                 </svg>
             </button>
+            
             <div class="mobile-menu">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
+                <a href="#">About Me</a>
                 <a href="#">Contact</a>
+                <a href="#"><img src="logos/github.svg" alt=""></a>
             </div>
         </nav>
 
+        <!-- Hero Section -->
         <section class="hero-section">
             <h2>Hey, I'm Brandon Winger-Air</h2>
             <h3>Full-Stack Developer & Designer</h3>
@@ -154,20 +156,22 @@
     </footer>
 
     <script>
-        const burgAnimation = () => {
-            var burger = document.querySelector('.svgburg');
+        const mobileMenu = () => {
+            var menuButton = document.querySelector('.menu-icon');
             var path1 = document.querySelector('.path1');
             var path2 = document.querySelector('.path2');
             var mline = document.querySelector('.mline');
+            var menu = document.querySelector('.mobile-menu');
 
-            burger.addEventListener('click',() => {     
+            menuButton.addEventListener('click',() => {     
                 path1.classList.toggle('cross');
                 path2.classList.toggle('cross');
                 mline.classList.toggle('hide');
+                menu.classList.toggle('open-menu');
             });
         };
 
-        burgAnimation();
+        mobileMenu();
     </script>
 </body>
 </html>
