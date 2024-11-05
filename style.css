@@ -57,7 +57,7 @@ h1 span {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.mobile-button, .mobile-menu {
+.mobile-button {
     display: none;
 }
 
@@ -223,6 +223,10 @@ h6 {
         padding: 0 6vw;
     }
 
+    h4 {
+        font-size: 21px;
+    }
+
     /* Mobile Menu Button */
     .mobile-button {
         position: relative;
@@ -281,6 +285,51 @@ h6 {
             -ms-filter: "FlipV";
         }
     }
+
+    /* Hero animation */
+    .h2-slide {
+        position: relative;
+        animation: slide-out 0.35s linear 0s;
+        animation-fill-mode: forwards;
+    }
+
+    .h3-slide {
+        position: relative;
+        animation: slide-out 0.35s linear 0.25s;
+        animation-fill-mode: forwards;
+    }
+
+    .h5-slide {
+        position: relative;
+        animation: slide-out 0.35s linear 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    
+    @keyframes slide-out {
+        from {
+            left: 0;
+        }
+        to {
+            left: -150%;
+            color: #fff;
+        }
+    }
+
+    .fade-in-title {
+        color: #fff;
+        animation: fade-in-titles 1.5s linear 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fade-in-titles {
+        from {
+            color: #fff;
+        }
+        to {
+            color: #000;
+        }
+    }
     
     /* Mobile Menu */
     .menu {
@@ -289,12 +338,43 @@ h6 {
 
     .mobile-menu {
         width: 100vw;
-        display: none;
         background-color: #fff;
         position: absolute;
         top: 122px;
         right: 6vw;
         text-align: right;
+        /* opacity: 1; */
+        display: none;
+    }
+
+    .mobile-menu-fade-in {
+        animation: fade-in 1s linear 0.8s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        display: block;
+    }
+    
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
+        }
+    }
+
+    .mobile-menu-fade-out {
+        animation: fade-out 1s linear;
+        animation-fill-mode: forwards;
+        display: block;
+        /* opacity: 1; */
+    }
+
+    @keyframes fade-out {
+        from {
+            opacity: 1;
+        } to {
+            opacity: 0;
+        }
     }
     
     .mobile-menu a {
@@ -305,10 +385,6 @@ h6 {
     
     .mobile-menu a:hover {
         background-color: #575757;
-    }
-
-    .open-menu {
-        display: block;
     }
 
     /* Hero Section */
@@ -362,8 +438,12 @@ h6 {
 
     /* About Section */
     #about {
-        width: 75vw;
-        padding: 52px 1vw;
+        width: 77.5vw;
+        padding: 52px 0;
+    }
+
+    #about h5 {
+        font-size: 19px;
     }
 
     /* Footer */
