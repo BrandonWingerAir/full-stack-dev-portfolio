@@ -43,10 +43,10 @@ const mobileMenu = () => {
 
         menu.classList.toggle('open-menu');
 
-        if (menu.classList == "mobile-menu-fade-in") {
+        if (menu.classList.contains('mobile-menu-fade-in')) {
             menu.classList.add('mobile-menu-fade-out');
         } else {
-            menu.classList.remove('mobile-menu-fade-out')
+            menu.classList.remove('mobile-menu-fade-out');
         }
 
         menu.classList.toggle('mobile-menu-fade-in');
