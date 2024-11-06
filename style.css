@@ -174,7 +174,13 @@ h3 {
     padding: 52px 0;
 }
 
+#about img {
+    display: block;
+    margin-top: 11px
+}
+
 #about .summary {
+    width: 95%;
     margin: 6px 0 16px;
 }
 
