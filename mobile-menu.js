@@ -39,9 +39,35 @@ const mobileMenu = () => {
     // iOS Button
     iosButton.addEventListener('click',() => {
         if (iosButton.src.indexOf('icons/ios-mobile-menu.svg') > 0) {
-            iosButton.src = 'icons/ios-close-menu.svg';
+            setTimeout(() => {
+                menu.style.display = 'block';
+            }, 1000);
+
+            iosButton.classList.remove('button-fade-in');
+            iosButton.classList.add('button-fade-out');
+            
+            setTimeout(() => {
+                iosButton.src = 'icons/ios-close-menu.svg';
+            }, 500);
+            
+            setTimeout(() => {
+                iosButton.classList.remove('button-fade-out');
+                iosButton.classList.add('button-fade-in');
+            }, 1500);
         } else {
-            iosButton.src = 'icons/ios-mobile-menu.svg'
+            console.log('close menu');
+            
+            iosButton.classList.remove('button-fade-in');
+            iosButton.classList.add('button-fade-out');
+            
+            setTimeout(() => {
+                iosButton.src = 'icons/ios-mobile-menu.svg';
+            }, 500);
+            
+            setTimeout(() => {
+                iosButton.classList.remove('button-fade-out');
+                iosButton.classList.add('button-fade-in');
+            }, 1500);
         }
 
         textAnimations();
@@ -51,7 +77,7 @@ const mobileMenu = () => {
         if (menu.classList.contains('mobile-menu-fade-in')) {
             setTimeout(() => {
                 menu.style.display = 'none';
-            }, 2000);
+            }, 1000);
 
             menu.classList.add('mobile-menu-fade-out');
         } else {

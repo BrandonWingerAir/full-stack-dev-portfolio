@@ -289,6 +289,35 @@ h6 {
             filter: FlipV;
             -ms-filter: "FlipV";
         }
+
+        .button-fade-out {
+            animation: button-fade-out 0.5s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes button-fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .button-fade-in {
+            animation: button-fade-in 0.5s linear;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+
+        @keyframes button-fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     }
 
     /* Hero animation */
