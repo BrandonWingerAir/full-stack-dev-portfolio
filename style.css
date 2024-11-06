@@ -5,7 +5,12 @@
     --primaryColor: #eee;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
+    position: relative;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
