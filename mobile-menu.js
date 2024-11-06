@@ -19,13 +19,18 @@ const mobileMenu = () => {
         mline.classList.toggle('hide');
 
         textAnimations();
-
+        
         menu.classList.toggle('open-menu');
         
         if (menu.classList.contains('mobile-menu-fade-in')) {
+            setTimeout(() => {
+                menu.style.display = 'none';
+            }, 1000);
+
             menu.classList.add('mobile-menu-fade-out');
         } else {
             menu.classList.remove('mobile-menu-fade-out')
+            menu.style.display = 'block';
         }
 
         menu.classList.toggle('mobile-menu-fade-in');
@@ -44,9 +49,14 @@ const mobileMenu = () => {
         menu.classList.toggle('open-menu');
 
         if (menu.classList.contains('mobile-menu-fade-in')) {
+            setTimeout(() => {
+                menu.style.display = 'none';
+            }, 2000);
+
             menu.classList.add('mobile-menu-fade-out');
         } else {
             menu.classList.remove('mobile-menu-fade-out');
+            menu.style.display = 'block';
         }
 
         menu.classList.toggle('mobile-menu-fade-in');
@@ -57,9 +67,17 @@ const mobileMenu = () => {
         slideText1.classList.toggle('h2-slide');
         slideText2.classList.toggle('h3-slide');
         slideText3.classList.toggle('h5-slide');
-        slideText1.classList.toggle('fade-in-title');
-        slideText2.classList.toggle('fade-in-title');
-        slideText3.classList.toggle('fade-in-title');
+
+        if (menu.classList.contains('mobile-menu-fade-in')) {
+            slideText1.classList.add('fade-in-title');
+            slideText2.classList.add('fade-in-title');
+            slideText3.classList.add('fade-in-title');
+        } else {
+            slideText1.classList.remove('fade-in-title');
+            slideText2.classList.remove('fade-in-title');
+            slideText3.classList.remove('fade-in-title');
+        }
+
     }
 };
 
